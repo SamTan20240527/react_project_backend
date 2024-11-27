@@ -1,5 +1,8 @@
+//Part 11: Step 1: Create routes
+
 const express = require('express');
 const router = express.Router();
+const pool = require('../database');
 const productService = require('../services/productService');
 
 // GET all products

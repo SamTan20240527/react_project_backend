@@ -4,13 +4,14 @@
 //Subsequent re-start:
 //  node index.js
 
-const express = require('express');
-//Enable cross origin resources sharing
-const cors = require('cors');
+//Part 11: Create productsRoutes
+
 require('dotenv').config();
-//Call database.js to connect to MySQL
+const express = require('express');
+const cors = require('cors');
 const pool = require('./database');
-//Register products router
+
+//Register products, user routers
 const productsRoutes = require('./routes/products');
 const userRoutes = require('./routes/users');
 
@@ -21,15 +22,13 @@ app.use(express.json());
 app.use(cors());
 
 // Routes
-app.get('/', (req, res) => {
-  res.json({ message: "Welcome to the E-Shop API" });
-});
-
-//To test: GET http://localhost:3000/api/products
 app.use('/api/products', productsRoutes);
-
-//To test: GET http://localhost:3000/api/users
 app.use('/api/users', userRoutes);
+
+// Basic route: http://localhost:3000/
+app.get('/', (req, res) => {
+  res.json({ message: 'Welcome to our e-commerce API' });
+});
 
 // Start the server: node index.js
 const PORT = process.env.PORT || 3000;

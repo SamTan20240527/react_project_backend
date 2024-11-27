@@ -1,3 +1,5 @@
+//Part 11: Step 3: Create data layer
+
 const pool = require('../database');
 
 async function getAllProducts() {
