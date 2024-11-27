@@ -1,4 +1,11 @@
 # react-project-backend
 
 
-Note Yet: //Part 11: Step 3: Create data layer
+
+Part 11: productData, productService, products.js - done
+Part 12: userData, userService, users.js -  done
+Part 13: cartData, cartService, cart.js & UserAuth.js - done
+
+
+Paul: moved all shoppingcart to cartstore
+

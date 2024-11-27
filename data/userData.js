@@ -1,3 +1,5 @@
+//Part 12: Create user data
+
 const pool = require('../database');
 
 async function getUserByEmail(email) {

@@ -11,9 +11,10 @@ const express = require('express');
 const cors = require('cors');
 const pool = require('./database');
 
-//Register products, user routers
+//Register products, user & cart routes
 const productsRoutes = require('./routes/products');
 const userRoutes = require('./routes/users');
+const cartRoutes = require('./routes/cart');
 
 const app = express();
 
@@ -24,6 +25,7 @@ app.use(cors());
 // Routes
 app.use('/api/products', productsRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/cart', cartRoutes);
 
 // Basic route: http://localhost:3000/
 app.get('/', (req, res) => {

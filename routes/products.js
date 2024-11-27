@@ -1,4 +1,4 @@
-//Part 11: Step 1: Create routes
+//Part 11: Create products route
 
 const express = require('express');
 const router = express.Router();

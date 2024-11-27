@@ -1,3 +1,5 @@
+//Part 12: Create user service
+
 const userData = require('../data/userData');
 const bcrypt = require('bcrypt');
 

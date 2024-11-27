@@ -1,4 +1,4 @@
-//Part 11: Step 3: Create data layer
+//Part 11: Create products data
 
 const pool = require('../database');
 
